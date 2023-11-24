@@ -10,13 +10,22 @@
     
   </head>
   <body>
-    <div class="container" >
+    {% include 'nav.html' %}
+    
+    <div class="container " >
    <h1 class="text-center mt-4 mb-4">{{company_name}} Careers</h1>
       <img class="img-fluid" src="https://jovian-careers-website-1--23f1001415.repl.co/static/banner.jpg"
          >
     <h2 class="text-center mt-2 mb-4">About Jovian</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor rhoncus dolor. Nec feugiat in fermentum posuere urna nec. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Sed ullamcorper morbi tincidunt ornare. Est ultricies integer quis auctor elit sed vulputate. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Vel orci porta non pulvinar neque laoreet. Ut aliquam purus sit amet luctus venenatis lectus.</p>
+      <div class="row">
+      <div class="col-6">
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor rhoncus dolor. Nec feugiat in fermentum posuere urna nec. Risus nullam eget felis eget nunc lobortis mattis aliquam faucibus. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Sed ullamcorper morbi tincidunt ornare. Est ultricies integer quis auctor elit sed vulputate. Vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet. Volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Vel orci porta non pulvinar neque laoreet. Ut aliquam purus sit amet luctus venenatis lectus.</p>
+      </div>
+      <div class = "d-none d-md-block col-md-6">
+      <img src="/static/people.jpg" style="height:320px">
+      </div>
     </div >
+    </div>
     <h2 class = "text-center mt-2 mb-4">Job Openings</h2>
     <div style="margin-left:70px">
         {% for job in jobs %}
@@ -28,9 +37,10 @@
         <p>TODO - Show the jobs here</p>
    
       <div class="text-center mt-2 mb-4">
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p >Copyright 2023, Jovian</p>
+      <a href="mailto:hello@jovian.ai?subject=Application%20for%20the%20post%20of%20XYZ" class="btn btn-primary btn-lg">Contact Us</a>
+      
       </div>
   </div>
+    {% include 'footer.html' %}
   </body>
 </html>
